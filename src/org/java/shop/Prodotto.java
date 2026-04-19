@@ -46,6 +46,7 @@ public class Prodotto {
     public BigDecimal getPrezzo() {
         return prezzo;
     }
+    
 
     public void setPrezzo(BigDecimal prezzo) {
         this.prezzo = prezzo;
@@ -61,5 +62,13 @@ public class Prodotto {
 
     public BigDecimal getPrezzoConIva() {
         return prezzo.add(prezzo.multiply(iva)).setScale(2, RoundingMode.DOWN);
+    }
+
+    @Override
+    public String toString(){
+        if(nome != null){
+         return codice + " - " + nome;
+        }
+        return null;
     }
 }

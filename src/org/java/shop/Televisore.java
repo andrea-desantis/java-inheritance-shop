@@ -18,11 +18,11 @@ public class Televisore extends Prodotto{
         return dimensioni + "pollici";
     }
 
-    public String getSmart(){
+    public String isSmart(){
         if(smart == true){
-            return "la TV è smart";
+            return "Si";
         }else{
-            return "la TV non è smart";
+            return "No";
         }
     }
 
@@ -33,4 +33,8 @@ public class Televisore extends Prodotto{
         this.smart = smart;
     }
 
+    @Override
+    public String toString(){
+        return super.toString() + "\nDimensioni: " + getDimensioni() + "\nSmart: " + isSmart();
+    }
 }
