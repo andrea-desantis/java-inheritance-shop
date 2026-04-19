@@ -26,9 +26,26 @@ public class Carrello {
             System.out.println("A quale categoria fa parte? tv, smartphone, cuffie ");
             String productCategory = input.nextLine();
 
-            switch (productCategory) {
-                case value:
-                    
+            switch (productCategory.toLowerCase()) {
+                case "tv":
+                    System.out.println("Dimensioni della Tv in pollici: ");
+                    int tvSize = integer.parseInt(input.nextLine());
+                    System.out.println("Smart TV? (inserire True o False)");
+                    boolean isSmartTv = Boolean.parseBoolean(input.nextLine());
+
+                    Televisore tv = new Televisore(productName, productBrand, new BigDecimal(productPrice), tvSize, isSmartTv);
+                    products[i] = tv;
+                    break;
+                
+
+                 case "smartphone":
+                    System.out.println("\\ ");
+                    int tvSize = integer.parseInt(input.nextLine());
+                    System.out.println("Smart TV? (inserire True o False)");
+                    boolean isSmartTv = Boolean.parseBoolean(input.nextLine());
+
+                    Televisore tv = new Televisore(productName, productBrand, new BigDecimal(productPrice), tvSize, isSmartTv);
+                    products[i] = tv;
                     break;
             
                 default:
