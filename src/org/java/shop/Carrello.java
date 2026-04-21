@@ -30,7 +30,7 @@ public class Carrello {
                 case "tv":
                     System.out.println("Dimensioni della Tv in pollici: ");
                     int tvSize = integer.parseInt(input.nextLine());
-                    System.out.println("Smart TV? (inserire True o False)");
+                    System.out.println("Smart TV? (inserire True o False) ");
                     boolean isSmartTv = Boolean.parseBoolean(input.nextLine());
 
                     Televisore tv = new Televisore(productName, productBrand, new BigDecimal(productPrice), tvSize, isSmartTv);
@@ -38,16 +38,27 @@ public class Carrello {
                     break;
                 
 
-                 case "smartphone":
-                    System.out.println("\\ ");
-                    int tvSize = integer.parseInt(input.nextLine());
-                    System.out.println("Smart TV? (inserire True o False)");
-                    boolean isSmartTv = Boolean.parseBoolean(input.nextLine());
+                case "smartphone":
+                    System.out.println("Codice IMEI:");
+                    String codiceIMEI = input.nextLine();
+                    System.out.println("Memoria(GB): ");
+                    int memoria = integer.parseInt(input.nextLine());
 
-                    Televisore tv = new Televisore(productName, productBrand, new BigDecimal(productPrice), tvSize, isSmartTv);
-                    products[i] = tv;
+                    Smartphone iphone = new Smartphone(productName, productBrand, new BigDecimal(productPrice), codiceIMEI, memoria);
+                    products[i] = iphone;
                     break;
-            
+                
+
+                case "cuffie":
+                    System.out.println("Colore: ");
+                    String colore = input.nextLine();
+                    System.out.println("Wireless? (inserire True o False) ");
+                    boolean isWireless = Boolean.parseBoolean(input.nextLine());
+
+                    Cuffie sony = new Cuffie(productName, productBrand, new BigDecimal(productPrice), colore, isWireless);
+                    products[i] = sony;
+                    break;
+                
                 default:
                     break;
             }
